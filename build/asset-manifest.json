@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/HabitsNow/static/css/main.a2e92191.css",
+    "main.js": "/HabitsNow/static/js/main.05b72b88.js",
+    "static/media/habit3.png": "/HabitsNow/static/media/habit3.61c254f78a18866355ba.png",
+    "index.html": "/HabitsNow/index.html",
+    "main.a2e92191.css.map": "/HabitsNow/static/css/main.a2e92191.css.map",
+    "main.05b72b88.js.map": "/HabitsNow/static/js/main.05b72b88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2e92191.css",
+    "static/js/main.05b72b88.js"
+  ]
+}
