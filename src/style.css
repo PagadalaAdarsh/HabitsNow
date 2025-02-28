@@ -1,0 +1,253 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #333;
+  background-image: url('./habit3.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container {
+  background-color: brown;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Task Colors */
+.task.todo {
+  background-color: rgb(56, 165, 233) !important;
+}
+
+.task.ongoing {
+  background-color: orange;
+}
+
+.task.completed {
+  background-color: green;
+  position: relative;
+  animation: congratulate 1s ease-in-out;
+}
+
+/* Animation for completing a task */
+@keyframes congratulate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Optional: Add a congratulatory message */
+.task.completed::after {
+  content: "Task Finished🎉";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: rgb(7, 114, 64);
+  font-weight: bold;
+  opacity: 10;
+  animation: showMessage 3.0s forwards;
+}
+
+@keyframes showMessage {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Header */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  padding: 20px;
+}
+
+.task-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.add-task-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  background-color: #218838;
+}
+
+/* Task Sections */
+.task-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.task-section {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 29%;
+  padding: 10px;
+  background-color: pink;
+}
+
+.task-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-section li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-text {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-section button {
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: purple;
+  color: white;
+}
+
+.task-section button:hover {
+  background-color: darkred;
+}
+
+/* Button Colors for Different Actions */
+button.move-to-todo-btn {
+  background-color: #2196f3; /* Blue */
+  color: white;
+}
+
+button.move-to-todo-btn:hover {
+  background-color: #1976d2; /* Darker Blue */
+}
+
+button.move-to-ongoing-btn {
+  background-color: #ff9800; /* Orange */
+}
+
+button.move-to-ongoing-btn:hover {
+  background-color: #f57c00;
+}
+
+button.move-to-completed-btn {
+  background-color: #4caf50; /* Green */
+}
+
+button.move-to-completed-btn:hover {
+  background-color: #388e3c;
+}
+
+button.delete-btn {
+  background-color: #ce2316; /* Red */
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Clear All Button */
+button.clear-all-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.clear-all-button:hover {
+  background-color: darkred;
+}
+
+/* Heading Container */
+.heading-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(145, 182, 200);
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #901e6c;
+  margin: 0;
+}
